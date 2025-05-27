@@ -9,11 +9,6 @@ pipeline {
     }
 
     stages {
-        stage('clone-code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Naveengoud8184/project-2.git'
-            }
-        }
         stage('build') {
             steps {
                 sh 'mvn clean deploy'
